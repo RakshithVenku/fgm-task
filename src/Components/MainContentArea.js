@@ -1,8 +1,15 @@
-import { FolderOpenOutlined,FileTextFilled } from '@ant-design/icons'
+import { FileTextFilled } from '@ant-design/icons'
 import { useState } from 'react'
+import {Venue} from './CarComponents/Venue'
+import {Creta} from './CarComponents/Creta'
+import {Seltos} from './CarComponents/Seltos'
+import {Carnival} from './CarComponents/Carnival'
+import {Duster} from './CarComponents/Duster'
+import {Kiger} from './CarComponents/Kiger'
 import  DrawerComp from './DrawerComp'
 import { Card, Divider } from 'antd'
-import Meta from 'antd/lib/card/Meta'
+
+//  images folder
 import venue from '../Car Images/Hyundai/hyundai-venue.jpg'
 import venue2 from '../Car Images/Hyundai/hyundai-venue-2.jpg'
 import creta from '../Car Images/Hyundai/hyundai-creta.jpg'
@@ -72,159 +79,32 @@ const MainContentArea = (props) => {
 			)}
 
 			{title === 'Venue' ? (
-				<div style={{ display: 'flex'}}>
-					{hyundaiVenue.map((ele, i) => {
-						return (
-							<Card
-								bordered={false}
-								style={{ width: 300, borderRadius: '10px', margin:'10px',textAlign:'center' }}
-								hoverable='true'>
-									<img
-										key={i}
-										alt='timer'
-										onClick={showDrawer}
-										src={ele}
-										height='200'
-										width='250'
-										
-									/>
-                                    <br />
-								    <br />
-								<Meta title='Venue' description='Compact SUV' />
-							</Card>
-						)
-					})}
-				</div>
+				<Venue hyundaiVenue={hyundaiVenue} showDrawer={showDrawer}/>
 			) : (
 				''
 			)}
 			{title === 'Creta' ? (
-				<div style={{ display: 'flex' }}>
-					{hyundaiCreta.map((ele, i) => {
-						return (
-							<Card
-								bordered={false}
-								style={{ width: 300, borderRadius: '10px', margin:'10px', textAlign:'center' }}
-								hoverable='true'>
-								<img
-									key={i}
-									alt='timer'
-									onClick={showDrawer}
-									src={ele}
-									height='200'
-									width='250'
-								/>
-                                <br />
-                                <br />
-								<Meta title='Creta' description='Ultimate SUV' />
-							</Card>
-						)
-					})}
-				</div>
+				<Creta hyundaiCreta={hyundaiCreta} showDrawer={showDrawer} />
 			) : (
 				''
 			)}
 			{title === 'Seltos' ? (
-				<div style={{ display: 'flex' }}>
-					{kiaSeltos.map((ele, i) => {
-						return (
-							<Card
-								bordered={false}
-								style={{ width: 300, borderRadius: '10px', margin:'10px', textAlign:'center' }}
-								hoverable='true'>
-								<img
-									key={i}
-									alt='timer'
-									onClick={showDrawer}
-									src={ele}
-									height='200'
-									width='250'
-								/>
-								<br />
-								<br />
-								<Meta title='Seltos' description='a 5 seater SUV' />
-							</Card>
-						)
-					})}
-				</div>
+				<Seltos kiaSeltos={kiaSeltos} showDrawer={showDrawer}/>
 			) : (
 				''
 			)}
 			{title === 'Carnival' ? (
-				<div style={{ display: 'flex' }}>
-					{kiaCarnival.map((ele, i) => {
-						return (
-							<Card
-								bordered={false}
-								style={{ width: 300, borderRadius: '10px', margin:'10px', textAlign:'center' }}
-								hoverable='true'>
-								<img
-									key={i}
-									alt='timer'
-									onClick={showDrawer}
-									src={ele}
-									height='200'
-									width='250'
-								/>
-								<br />
-								<br />
-								<Meta title='Carnival' description='a 7 seater MUV' />
-							</Card>
-						)
-					})}
-				</div>
+				<Carnival kiaCarnival={kiaCarnival} showDrawer={showDrawer} />
 			) : (
 				''
 			)}
             {title === 'Duster' ? (
-				<div style={{ display: 'flex' }}>
-					{renaultDuster.map((ele, i) => {
-						return (
-							<Card
-								bordered={false}
-								style={{ width: 300, borderRadius: '10px', margin:'10px', textAlign:'center' }}
-								hoverable='true'>
-								<img
-									key={i}
-									alt='timer'
-									onClick={showDrawer}
-									src={ele}
-									height='200'
-									width='250'
-								/>
-								<br />
-								<br />
-								<Meta title='Duster' description='a 5 seater SUV' />
-							</Card>
-						)
-					})}
-				</div>
+				<Duster renaultDuster={renaultDuster} showDrawer={showDrawer} />
 			) : (
 				''
 			)}
             {title === 'Kiger' ? (
-				<div style={{ display: 'flex' }}>
-					{renaultKiger.map((ele, i) => {
-						return (
-							<Card
-								bordered={false}
-								style={{ width: 300, borderRadius: '10px', margin:'10px', textAlign:'center' }}
-								hoverable='true'>
-								<img
-									key={i}
-									alt='timer'
-									onClick={showDrawer}
-									src={ele}
-									height='200'
-									width='250'
-								/>
-								<br />
-								<br />
-								<Meta title='Kiger' description='a 5 seater SUV' />
-							</Card>
-						)
-					})}
-				</div>
+				<Kiger renaultKiger={renaultKiger} showDrawer={showDrawer} />
 			) : (
 				''
 			)}
