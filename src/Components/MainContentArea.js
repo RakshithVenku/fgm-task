@@ -47,9 +47,9 @@ const MainContentArea = (props) => {
 		<>
 			<Divider orientation='left' plain>
 				{children?.length ? (
-					<h2>Folder Present In the folders</h2>
+					<h2>Folders</h2>
 				) : (
-					<h2>View Your Images Here</h2>
+					<h2>Images Content</h2>
 				)}
 			</Divider>
 			{children?.length ? (
@@ -66,15 +66,15 @@ const MainContentArea = (props) => {
 			) : (
 				''
 			)}
+
 			{title === 'Venue' ? (
-				<div style={{ display: 'flex' }}>
+				<div style={{ display: 'flex'}}>
 					{hyundaiVenue.map((ele, i) => {
 						return (
 							<Card
 								bordered={false}
-								style={{ width: 300, borderRadius: '10px' }}
+								style={{ width: 300, borderRadius: '10px', margin:'10px' }}
 								hoverable='true'>
-								<p>
 									<img
 										key={i}
 										alt='timer'
@@ -83,7 +83,8 @@ const MainContentArea = (props) => {
 										height='200'
 										width='200'
 									/>
-								</p>
+                                    <br />
+								    <br />
 								<Meta title='Venue' description='Compact SUV' />
 							</Card>
 						)
@@ -98,7 +99,7 @@ const MainContentArea = (props) => {
 						return (
 							<Card
 								bordered={false}
-								style={{ width: 300, borderRadius: '10px' }}
+								style={{ width: 300, borderRadius: '10px', margin:'10px' }}
 								hoverable='true'>
 								<img
 									key={i}
@@ -108,8 +109,8 @@ const MainContentArea = (props) => {
 									height='200'
 									width='200'
 								/>
-								<br />
-								<br />
+                                <br />
+                                <br />
 								<Meta title='Creta' description='Ultimate SUV' />
 							</Card>
 						)
@@ -124,7 +125,7 @@ const MainContentArea = (props) => {
 						return (
 							<Card
 								bordered={false}
-								style={{ width: 300, borderRadius: '10px' }}
+								style={{ width: 300, borderRadius: '10px', margin:'10px' }}
 								hoverable='true'>
 								<img
 									key={i}
@@ -149,8 +150,8 @@ const MainContentArea = (props) => {
 					{kiaCarnival.map((ele, i) => {
 						return (
 							<Card
-								bordered={true}
-								style={{ width: 300, borderRadius: '10px' }}
+								bordered={false}
+								style={{ width: 300, borderRadius: '10px', margin:'10px' }}
 								hoverable='true'>
 								<img
 									key={i}
@@ -175,8 +176,8 @@ const MainContentArea = (props) => {
 					{renaultDuster.map((ele, i) => {
 						return (
 							<Card
-								bordered={true}
-								style={{ width: 300, borderRadius: '10px' }}
+								bordered={false}
+								style={{ width: 300, borderRadius: '10px', margin:'10px' }}
 								hoverable='true'>
 								<img
 									key={i}
@@ -201,8 +202,8 @@ const MainContentArea = (props) => {
 					{renaultKiger.map((ele, i) => {
 						return (
 							<Card
-								bordered={true}
-								style={{ width: 300, borderRadius: '10px' }}
+								bordered={false}
+								style={{ width: 300, borderRadius: '10px', margin:'10px' }}
 								hoverable='true'>
 								<img
 									key={i}
