@@ -18,7 +18,7 @@ const treeData = [
                         icon: <FolderOpenOutlined />,
                     },
                     {
-                        title: 'i20',
+                        title: 'Creta',
                         key: '0-0-0-1',
                         icon: <FolderOpenOutlined />,
                     },
@@ -60,13 +60,12 @@ const treeData = [
     },
 ];
 
-const LeftPanel = () => {
-  const onSelect = (keys, info) => {
-    console.log('Trigger Select', keys, info);
-  };
+const LeftPanel = (props) => {
+  const { setSelected } = props
 
-  const onExpand = () => {
-    console.log('Trigger Expand');
+  const onSelect = (keys, info) => {
+    console.log('Trigger Select', keys, info)
+    setSelected(info)
   };
 
   return (
@@ -74,7 +73,7 @@ const LeftPanel = () => {
       multiple
       defaultExpandAll
       onSelect={onSelect}
-      onExpand={onExpand}
+      defaultSelectedKeys={['0-0-0']}
       treeData={treeData}
     />
   );
