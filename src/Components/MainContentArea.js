@@ -1,6 +1,6 @@
 import { FolderOpenOutlined } from '@ant-design/icons'
 import { useState } from 'react'
-import { DrawerComp } from './DrawerComp'
+import  DrawerComp from './DrawerComp'
 import { Card, Divider } from 'antd'
 import Meta from 'antd/lib/card/Meta'
 import venue from '../Car Images/Hyundai/hyundai-venue.jpg'
@@ -225,7 +225,7 @@ const MainContentArea = (props) => {
             
 			<br />
 
-			<Drawercomponent close={onClose} state={state} info={info} />
+			<DrawerComp close={onClose} state={state} info={info} />
 		</>
 	)
 }
