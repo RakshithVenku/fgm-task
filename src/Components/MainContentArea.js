@@ -231,7 +231,7 @@ const MainContentArea = (props) => {
             
 			<br />
 
-			<DrawerComp onClose={onClose} state={state} info={info} />
+			<DrawerComp state={state} info={info} onClose={onClose} />
 		</>
 	)
 }

@@ -13,7 +13,7 @@ const HeaderComp = () => {
       ]
 
     return (
-        <div className='site-page-header-ghost-wrapper' style={{marginBottom: '10px'}}>
+        <div className='site-page-header-ghost-wrapper' style={{marginBottom: '10px', borderRadius: '10px'}}>
              <PageHeader
                ghost={false}
                className="site-page-header"

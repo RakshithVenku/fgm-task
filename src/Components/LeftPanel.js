@@ -1,5 +1,5 @@
 import { Tree } from 'antd';
-import { DownOutlined, FolderOpenOutlined,CarOutlined } from '@ant-design/icons'
+import { DownOutlined,CarOutlined } from '@ant-design/icons'
 const { DirectoryTree } = Tree;
 const treeData = [
     {

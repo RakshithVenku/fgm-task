@@ -6,7 +6,7 @@ import HeaderComp from './Components/HeaderComp'
 import LeftPanel from './Components/LeftPanel'
 import MainContentArea from './Components/MainContentArea'
 
-const { Header, Content, Footer, Sider } = Layout;
+const {Content, Sider } = Layout;
 
 const App = () => {
   const [selected, setSelected] = useState({})
