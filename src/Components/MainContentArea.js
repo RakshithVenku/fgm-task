@@ -1,4 +1,4 @@
-import { FolderOpenOutlined } from '@ant-design/icons'
+import { FolderOpenOutlined,FileTextFilled } from '@ant-design/icons'
 import { useState } from 'react'
 import  DrawerComp from './DrawerComp'
 import { Card, Divider } from 'antd'
@@ -53,13 +53,17 @@ const MainContentArea = (props) => {
 				)}
 			</Divider>
 			{children?.length ? (
-				<div>
+				<div style={{ display: 'flex'}}>
 					{children?.map((ele, i) => {
 						return (
-							<div key={i} onClick={showDrawer}>
-								<FolderOpenOutlined key={i} />
-								{ele.title}
-							</div>
+							<Card 
+							    onClick={showDrawer}
+							    bordered={false}
+							    style={{ width: 130, borderRadius: '3px', margin:'5px' }}
+							    hoverable='true'>
+							    <FileTextFilled key={i} style={{ fontSize: '80px' }} />
+							    <p style={{textAlign:'center', marginTop: '10px'}}>{ele.title}</p>
+						    </Card>
 						)
 					})}
 				</div>
@@ -73,7 +77,7 @@ const MainContentArea = (props) => {
 						return (
 							<Card
 								bordered={false}
-								style={{ width: 300, borderRadius: '10px', margin:'10px' }}
+								style={{ width: 300, borderRadius: '10px', margin:'10px',textAlign:'center' }}
 								hoverable='true'>
 									<img
 										key={i}
@@ -81,7 +85,8 @@ const MainContentArea = (props) => {
 										onClick={showDrawer}
 										src={ele}
 										height='200'
-										width='200'
+										width='250'
+										
 									/>
                                     <br />
 								    <br />
@@ -99,7 +104,7 @@ const MainContentArea = (props) => {
 						return (
 							<Card
 								bordered={false}
-								style={{ width: 300, borderRadius: '10px', margin:'10px' }}
+								style={{ width: 300, borderRadius: '10px', margin:'10px', textAlign:'center' }}
 								hoverable='true'>
 								<img
 									key={i}
@@ -107,7 +112,7 @@ const MainContentArea = (props) => {
 									onClick={showDrawer}
 									src={ele}
 									height='200'
-									width='200'
+									width='250'
 								/>
                                 <br />
                                 <br />
@@ -125,7 +130,7 @@ const MainContentArea = (props) => {
 						return (
 							<Card
 								bordered={false}
-								style={{ width: 300, borderRadius: '10px', margin:'10px' }}
+								style={{ width: 300, borderRadius: '10px', margin:'10px', textAlign:'center' }}
 								hoverable='true'>
 								<img
 									key={i}
@@ -133,7 +138,7 @@ const MainContentArea = (props) => {
 									onClick={showDrawer}
 									src={ele}
 									height='200'
-									width='200'
+									width='250'
 								/>
 								<br />
 								<br />
@@ -151,7 +156,7 @@ const MainContentArea = (props) => {
 						return (
 							<Card
 								bordered={false}
-								style={{ width: 300, borderRadius: '10px', margin:'10px' }}
+								style={{ width: 300, borderRadius: '10px', margin:'10px', textAlign:'center' }}
 								hoverable='true'>
 								<img
 									key={i}
@@ -159,7 +164,7 @@ const MainContentArea = (props) => {
 									onClick={showDrawer}
 									src={ele}
 									height='200'
-									width='200'
+									width='250'
 								/>
 								<br />
 								<br />
@@ -177,7 +182,7 @@ const MainContentArea = (props) => {
 						return (
 							<Card
 								bordered={false}
-								style={{ width: 300, borderRadius: '10px', margin:'10px' }}
+								style={{ width: 300, borderRadius: '10px', margin:'10px', textAlign:'center' }}
 								hoverable='true'>
 								<img
 									key={i}
@@ -185,7 +190,7 @@ const MainContentArea = (props) => {
 									onClick={showDrawer}
 									src={ele}
 									height='200'
-									width='200'
+									width='250'
 								/>
 								<br />
 								<br />
@@ -203,7 +208,7 @@ const MainContentArea = (props) => {
 						return (
 							<Card
 								bordered={false}
-								style={{ width: 300, borderRadius: '10px', margin:'10px' }}
+								style={{ width: 300, borderRadius: '10px', margin:'10px', textAlign:'center' }}
 								hoverable='true'>
 								<img
 									key={i}
@@ -211,7 +216,7 @@ const MainContentArea = (props) => {
 									onClick={showDrawer}
 									src={ele}
 									height='200'
-									width='200'
+									width='250'
 								/>
 								<br />
 								<br />
@@ -226,7 +231,7 @@ const MainContentArea = (props) => {
             
 			<br />
 
-			<DrawerComp close={onClose} state={state} info={info} />
+			<DrawerComp onClose={onClose} state={state} info={info} />
 		</>
 	)
 }

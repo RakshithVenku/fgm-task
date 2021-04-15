@@ -1,26 +1,24 @@
 import { Tree } from 'antd';
-import { DownOutlined, FolderOpenOutlined } from '@ant-design/icons'
+import { DownOutlined, FolderOpenOutlined,CarOutlined } from '@ant-design/icons'
 const { DirectoryTree } = Tree;
 const treeData = [
     {
         title: 'Car Companies',
         key: '0-0',
-        icon: <FolderOpenOutlined />,
         children: [
             {
                 title: 'Hyundai',
                 key: '0-0-0',
-                icon: <FolderOpenOutlined />,
                 children: [
                     {
                         title: 'Venue',
                         key: '0-0-0-0',
-                        icon: <FolderOpenOutlined />,
+                        icon: <CarOutlined />,
                     },
                     {
                         title: 'Creta',
                         key: '0-0-0-1',
-                        icon: <FolderOpenOutlined />,
+                        icon: <CarOutlined />,
                     },
                 ],
             },
@@ -31,12 +29,12 @@ const treeData = [
                     {
                         title: 'Seltos',
                         key: '0-0-1-0',
-                        icon: <FolderOpenOutlined />,
+                        icon: <CarOutlined />,
                     },
                     {
                         title: 'Carnival',
                         key: '0-0-1-1',
-                        icon: <FolderOpenOutlined />,
+                        icon: <CarOutlined />,
                     },
                 ],
             },
@@ -47,12 +45,12 @@ const treeData = [
                     {
                         title: 'Duster',
                         key: '0-0-2-0',
-                        icon: <FolderOpenOutlined />,
+                        icon: <CarOutlined />,
                     },
                     {
                         title: 'Kiger',
                         key: '0-0-2-1',
-                        icon: <FolderOpenOutlined />,
+                        icon: <CarOutlined />,
                     },
                 ],
             },
@@ -74,6 +72,7 @@ const LeftPanel = (props) => {
       defaultExpandAll
       onSelect={onSelect}
       defaultSelectedKeys={['0-0-0']}
+      switcherIcon={<DownOutlined />}
       treeData={treeData}
     />
   );

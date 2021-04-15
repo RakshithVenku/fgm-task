@@ -1,14 +1,14 @@
 import { Drawer } from 'antd';
 
 const DrawerComp = (props) => {
-	const { close, state, info } = props;
+	const { onClose, state, info } = props;
 	return (
 		<>
 			<Drawer
 				title='Car Details'
 				placement='right'
 				closable={true}
-				onClose={close}
+				onClose={onClose}
 				visible={state?.visible}
 				key={state?.placement}>
 				Title : {info?.node?.title}

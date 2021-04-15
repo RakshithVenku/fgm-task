@@ -17,7 +17,7 @@ const App = () => {
       
       <Content style={{ margin: '10px' }}>
         <HeaderComp />
-        <div className="site-layout-background" style={{ minHeight: 563 }}>
+        <div className="site-layout-background" style={{ minHeight: 529}}>
           <Layout>
             <Sider
 							theme='light'
